@@ -1,0 +1,42 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+html {
+  font-family: monospace;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(25, 150, 50);
+}
+
+header {
+  padding: 2rem;
+  background-color: lightgray;
+}
+
+input {
+  margin: 1rem 1rem;
+}
+
+input#red {
+  accent-color: red;
+}
+
+input#green {
+  accent-color: green;
+}
+
+input#blue {
+  accent-color: blue;
+}
+
+#color-output {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
