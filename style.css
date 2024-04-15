@@ -18,9 +18,8 @@ body {
 header {
   padding: 2rem;
   background-color: lightgray;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  display: block;
+  text-align: center;
 }
 
 input {
@@ -39,7 +38,14 @@ input#blue {
   accent-color: blue;
 }
 
-#color-output {
+#color-output,
+button {
+  font-family: monospace;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+button {
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
