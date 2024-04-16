@@ -7,10 +7,14 @@ const button = document.getElementById("button");
 
 // Render HTML
 function setBackgroundColor() {
-  let red = redSlider.value;
-  let green = greenSlider.value;
-  let blue = blueSlider.value;
-  let color = "rgb(" + red + ", " + green + ", " + blue + ")";
+  let color =
+    "rgb(" +
+    redSlider.value +
+    ", " +
+    greenSlider.value +
+    ", " +
+    blueSlider.value +
+    ")";
   colorOutput.textContent = color;
   document.body.style.backgroundColor = color;
 }
@@ -24,15 +28,13 @@ function setRandomColor() {
     })
 
     .then((data) => {
-      const r = data.rgb.r;
-      const g = data.rgb.g;
-      const b = data.rgb.b;
-      const randomColor = "rgb(" + r + ", " + g + ", " + b + ")";
+      const randomColor =
+        "rgb(" + data.rgb.r + ", " + data.rgb.g + ", " + data.rgb.b + ")";
       colorOutput.textContent = randomColor;
       document.body.style.backgroundColor = randomColor;
-      redSlider.setAttribute("value", r);
-      greenSlider.setAttribute("value", g);
-      blueSlider.setAttribute("value", b);
+      redSlider.value = data.rgb.r;
+      greenSlider.value = data.rgb.g;
+      blueSlider.value = data.rgb.b;
     });
 }
 
